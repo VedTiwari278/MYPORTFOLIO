@@ -5,21 +5,16 @@ const Education = require("../model/Education");
 const Experience = require("../model/Experience");
 
 exports.getHomePage = (req, res) => {
-  console.log("Hello World");
-  // res.send("Hello World from Ved's Portfolio Backend 🚀");
   res.render("index");
 };
 
 exports.getSkillPage = async (req, res) => {
   const data = await Skill.find();
-  // console.log("Mera skill :", data.title);
   res.render("Skills", { data });
 };
 
 exports.Certifications = async (req, res) => {
   const data = await Certificate.find();
-
-  console.log("My Certification lies here...");
   res.render("Certification", { data });
 };
 
