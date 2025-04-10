@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-white font-[Inter]">
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div
+        class="w-full max-w-xl bg-gray-800/50 p-8 rounded-xl shadow-lg border border-gray-700"
+      >
+        <h2 class="text-3xl font-bold text-center text-yellow-400 mb-6">
+          Add New Project
+        </h2>
+        <form action="/admin/add-project" method="POST" class="space-y-6">
+          <!-- Project Title -->
+          <div>
+            <label
+              for="title"
+              class="block text-sm font-medium mb-1 text-gray-200"
+            >
+              Project Title
+            </label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              required
+              class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              placeholder="Enter your project title"
+            />
+          </div>
+
+          <!-- Description -->
+          <div>
+            <label
+              for="description"
+              class="block text-sm font-medium mb-1 text-gray-200"
+            >
+              Description
+            </label>
+            <textarea
+              name="description"
+              id="description"
+              rows="4"
+              required
+              class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              placeholder="Describe your project..."
+            ></textarea>
+          </div>
+
+          <!-- GitHub Link -->
+          <div>
+            <label
+              for="github"
+              class="block text-sm font-medium mb-1 text-gray-200"
+            >
+              GitHub Link
+            </label>
+            <input
+              type="url"
+              name="github"
+              id="github"
+              class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              placeholder="https://github.com/username/project"
+            />
+          </div>
+
+          <!-- Live Preview Link -->
+          <div>
+            <label
+              for="live"
+              class="block text-sm font-medium mb-1 text-gray-200"
+            >
+              Live Preview Link
+            </label>
+            <input
+              type="url"
+              name="live"
+              id="live"
+              class="w-full px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              placeholder="https://yourproject.live"
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-yellow-400 text-gray-900 font-semibold px-6 py-2 rounded-lg hover:bg-yellow-300 transition duration-200"
+            >
+              Add Project
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

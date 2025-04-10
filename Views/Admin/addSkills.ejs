@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Skill</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gray-900 text-white min-h-screen flex items-center justify-center"
+  >
+    <form
+      action="/admin/add-skill"
+      method="POST"
+      class="bg-gray-800 p-8 rounded-xl w-full max-w-md shadow-lg"
+    >
+      <h2 class="text-2xl font-bold mb-6 text-center text-blue-400">
+        Add New Skill
+      </h2>
+
+      <label class="block mb-2 text-sm">Skill Title</label>
+      <input
+        type="text"
+        name="title"
+        class="w-full p-2 mb-4 rounded bg-gray-700 text-white"
+        required
+      />
+
+      <label class="block mb-2 text-sm">Description</label>
+      <textarea
+        name="description"
+        rows="4"
+        class="w-full p-2 mb-4 rounded bg-gray-700 text-white"
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded"
+      >
+        Add Skill
+      </button>
+    </form>
+  </body>
+</html>
